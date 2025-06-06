@@ -21,7 +21,7 @@ const Footer = () => {
             <img src={logo2} alt="Logo" className="h-12" />
           </Link>
           <div className="flex justify-center md:justify-start gap-3 text-2xl">
-            <a href="https://www.facebook.com/profile.php?id=61575979934289" aria-label="Facebook" className="hover:opacity-80 rounded-lg transition">
+            <a href="https://www.facebook.com/profile.php?id=61575979934289" aria-label="Facebook" className="hover:opacity-80 transition">
               <FaFacebookSquare />
             </a>
             <a href="https://www.instagram.com/shokupanbakehouse?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" className="hover:opacity-80 transition">
@@ -54,7 +54,7 @@ const Footer = () => {
           {/* Contact Info */}
         <div className="text-sm md:text-base space-y-2">
           <h4 className="font-extrabold text-lg mb-1 text-center md:text-left">Contact us!</h4>
-          <p>Email: <a href="mailto:example@gmail.com" className="border-b-1">example@gmail.com</a></p>
+          <p>Email: <a href="mailto:Shokupanbakehouse@gmail.com" className="border-b-1">Shokupanbakehouse@gmail.com</a></p>
           <p>Phone: (407) 250-5129</p>
         </div>
       </div>

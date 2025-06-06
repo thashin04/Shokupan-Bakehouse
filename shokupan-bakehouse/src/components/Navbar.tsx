@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <img src={logo} alt="Shokupan Logo" className="h-12 w-auto" />
+          <img src={logo} alt="Shokupan Logo" className="h-12 w-auto hover:scale-105 duration-250" />
         </Link>
 
         {/* Desktop Navigation */}
