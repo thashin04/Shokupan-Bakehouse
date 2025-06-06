@@ -5,9 +5,11 @@
 
 @theme {
   --color-offwhite: #F6F3E9;
-  --color-darkred: #822C2C;
+  --color-lightred: #A34A4A;
+  --color-darkred: #792424;
   --color-mediumgray: #3A3835;
   --color-darkgray: #282624;
+  --color-navwhite: #FFFCF3;
   --font-italiana: "Italiana", "sans-serif";
   --font-josefin: "Josefin Sans", "sans-serif";
 }
