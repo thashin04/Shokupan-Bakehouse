@@ -8,7 +8,7 @@ const Footer = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Menu", path: "/menu" },
+    { name: "Menu", path: "/menu/drinks" },
     { name: "About", path: "/about" },
   ];
 

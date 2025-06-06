@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import { AiOutlineSearch, AiOutlineDown } from 'react-icons/ai';
 
 const foodCategories = [
@@ -79,8 +77,6 @@ function FoodMenu() {
 
   return (
     <div className="bg-[#fef9f3] text-black min-h-screen">
-      <Navbar />
-
       <div className="pt-20 pb-12 px-6 md:px-24">
         {/* Header + Dropdown Navigation */}
         <div className="flex justify-between items-center mb-8">
@@ -91,8 +87,8 @@ function FoodMenu() {
             >
               Food <AiOutlineDown className="ml-1" />
             </button>
-            <a href="/pastriesmenu" className="border-l pl-4">Pastries</a>
-            <a href="/drinksmenu" className="border-l pl-4">Drinks</a>
+            <a href="/menu/pastry" className="border-l pl-4">Pastries</a>
+            <a href="/menu/drinks" className="border-l pl-4">Drinks</a>
 
             {/* Dropdown Links */}
             {showDropdown && (
@@ -146,8 +142,6 @@ function FoodMenu() {
           </div>
         ))}
       </div>
-
-      <Footer />
     </div>
   );
 }

@@ -81,8 +81,6 @@ export default function DrinksMenu() {
 
   return (
     <div className="bg-[#fdf7ef] text-black min-h-screen scroll-smooth">
-      <Navbar />
-
       <div className="w-full h-64 bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: "url('/public/menu-banner.jpg')" }}>
         <h1 className="text-white text-5xl font-bold">MENU</h1>
       </div>
@@ -144,8 +142,6 @@ export default function DrinksMenu() {
 
         <h2 className="text-center text-4xl font-bold text-[#8e2d2d] py-10">ETC. ETC.</h2>
       </div>
-
-      <Footer />
     </div>
   );
 }

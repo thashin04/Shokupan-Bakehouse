@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import DrinksMenu from "./pages/MenuPage/DrinksMenu";
 import FoodMenu from "./pages/MenuPage/FoodMenu";
+import PastryMenu from "./pages/MenuPage/PastryMenu";
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/drinksmenu" element={<DrinksMenu />} />
-          <Route path="/foodmenu" element={<FoodMenu />} />
+          <Route path="/menu/drinks" element={<DrinksMenu />} />
+          <Route path="/menu/food" element={<FoodMenu />} />
+          <Route path="/menu/pastry" element={<PastryMenu />} />
         </Routes>
         <Footer />
       </Router>
