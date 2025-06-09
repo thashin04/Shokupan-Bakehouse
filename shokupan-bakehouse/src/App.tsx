@@ -8,9 +8,8 @@ import {
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
-import DrinksMenu from "./pages/MenuPage/DrinksMenu";
-import FoodMenu from "./pages/MenuPage/FoodMenu";
-import PastryMenu from "./pages/MenuPage/PastryMenu";
+import FullMenu from './pages/MenuPage/MenuPage';
+
 
 function App() {
   return (
@@ -19,9 +18,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/menu/drinks" element={<DrinksMenu />} />
-          <Route path="/menu/food" element={<FoodMenu />} />
-          <Route path="/menu/pastry" element={<PastryMenu />} />
+          <Route path="/menu" element={<FullMenu />} />
         </Routes>
         <Footer />
       </Router>

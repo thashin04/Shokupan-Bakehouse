@@ -1,9 +1,4 @@
-import React, { useState } from 'react';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-import { AiOutlineSearch, AiOutlineDown } from 'react-icons/ai';
-
-const categories = [
+export const categories = [
   {
     id: 'fruit',
     title: 'Fruit Green Tea',
@@ -75,73 +70,3 @@ const categories = [
     ],
   },
 ];
-
-export default function DrinksMenu() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  return (
-    <div className="bg-[#fdf7ef] text-black min-h-screen scroll-smooth">
-      <div className="w-full h-64 bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: "url('/public/menu-banner.jpg')" }}>
-        <h1 className="text-white text-5xl font-bold">MENU</h1>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 py-10">
-        <div className="flex flex-wrap justify-start items-center mb-10 gap-8">
-          <div className="relative">
-            <button onClick={() => setDropdownOpen(!dropdownOpen)} className="font-bold underline text-xl flex items-center gap-1">
-              Drinks <AiOutlineDown />
-            </button>
-            {dropdownOpen && (
-              <div className="absolute bg-[#e0dede] text-black border mt-2 shadow z-10 w-48">
-                {categories.map(cat => (
-                  <a
-                    key={cat.id}
-                    href={`#${cat.id}`}
-                    onClick={() => setDropdownOpen(false)}
-                    className="block px-4 py-2 hover:bg-gray-300 text-sm"
-                  >
-                    {cat.title}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <div className="border-r border-black h-6"></div>
-
-          <span className="text-xl">Pastries</span>
-          <div className="border-r border-black h-6"></div>
-          <span className="text-xl">Food</span>
-
-          <div className="ml-auto flex items-center border-b border-black">
-            <input placeholder="Search" className="bg-transparent focus:outline-none px-2 text-sm" />
-            <AiOutlineSearch className="text-xl" />
-          </div>
-        </div>
-
-        <h2 className="text-5xl text-[#8e2d2d] font-light mb-12">Drinks</h2>
-
-        {categories.map((cat) => (
-          <div key={cat.id} id={cat.id} className="mb-16 scroll-mt-24">
-            <h3 className="text-3xl font-bold text-[#8e2d2d] border-b-4 border-[#8e2d2d] mb-8 w-fit">{cat.title}</h3>
-            <div className="grid md:grid-cols-2 gap-10">
-              {cat.items.map((drink) => (
-                <div key={drink.name}>
-                  <div className="flex justify-between items-center mb-1">
-                    <h4 className="text-2xl font-semibold text-[#8e2d2d]">{drink.name}</h4>
-                    <div className="border border-black rounded-full px-3 py-1 text-sm">{drink.price}</div>
-                  </div>
-                  {drink.desc && <p className="mt-1 text-sm">{drink.desc}</p>}
-                  {drink.allergies && <p className="text-sm italic text-gray-700 mt-2">Potential Allergies: {drink.allergies}</p>}
-                  <hr className="mt-3 border-gray-400" />
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-
-        <h2 className="text-center text-4xl font-bold text-[#8e2d2d] py-10">ETC. ETC.</h2>
-      </div>
-    </div>
-  );
-}
