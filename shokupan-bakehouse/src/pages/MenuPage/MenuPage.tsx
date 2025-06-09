@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from '../../components/Navbar';
-import backgroundImage from '../../assets/shokupan-background.png';
+import menuBackground from '../../assets/menuBackground.png'; // ✅ The image you want
 import { categories as drinkCategories } from './DrinksData';
 import { foodCategories } from './FoodData';
 
@@ -23,19 +22,16 @@ export default function MenuPage() {
   return (
     <div className="bg-[#fdf7ef] text-black min-h-screen scroll-smooth">
 
-      <div
-        className="relative w-full h-64 flex items-center justify-center"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
-        <h1 className="relative text-white text-5xl font-bold z-10">MENU</h1>
+      {/* ✅ Image banner only, no text or overlay */}
+      <div className="w-full h-64 overflow-hidden">
+        <img
+          src={menuBackground}
+          alt="Menu Banner"
+          className="w-full h-full object-cover"
+        />
       </div>
 
-      {/* Tabs: Drinks and Food only */}
+      {/* Tabs: Drinks and Food */}
       <div className="flex justify-center mt-10 gap-8 text-xl font-semibold">
         {['Drinks', 'Food'].map((tab) => (
           <button
@@ -48,6 +44,7 @@ export default function MenuPage() {
         ))}
       </div>
 
+      {/* Menu content based on active tab */}
       <div className="max-w-6xl mx-auto px-6 py-10">
         <h2 className="text-4xl font-bold text-[#8e2d2d] mb-8">{activeTab}</h2>
 
@@ -76,7 +73,6 @@ export default function MenuPage() {
           </div>
         ))}
       </div>
-
     </div>
   );
 }
