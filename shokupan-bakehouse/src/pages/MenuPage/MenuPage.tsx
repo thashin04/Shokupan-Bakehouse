@@ -4,6 +4,7 @@ import temppastry from '../../assets/temppastry.webp';
 import { categories as drinkCategories } from './DrinksData';
 import { foodCategories } from './FoodData';
 import { pastryCategories } from './PastryData';
+import { AiOutlineSearch } from "react-icons/ai";
 
 export default function MenuPage() {
   const [activeTab, setActiveTab] = useState('Drinks');
@@ -78,7 +79,7 @@ export default function MenuPage() {
       {/* Tabs + Search */}
       <div className="w-full max-w-6xl mx-auto px-6 mt-10 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex-1 flex justify-start md:justify-center pl-6 md:pl-70">
-          <div className="flex gap-6 text-3xl font-bold items-center">
+          <div className="flex gap-6 text-3xl font-regular font-josefin items-center">
             {tabOptions.map((tab, index) => (
               <React.Fragment key={tab.name}>
                 <div className="relative" ref={openDropdown === tab.name ? dropdownRef : null}>
@@ -92,11 +93,11 @@ export default function MenuPage() {
                     aria-haspopup="true"
                     aria-expanded={openDropdown === tab.name}
                     style={{
-                      fontFamily: 'var(--font-italiana)',
-                      fontWeight: 'bold',
-                      textDecoration: activeTab === tab.name ? 'underline' : 'none',
-                      textUnderlineOffset: '4px',
-                    }}
+                    //   fontFamily: 'var(--font-italiana)',
+                    //   fontWeight: 'bold',
+                       textDecoration: activeTab === tab.name ? 'underline' : 'none',
+                       textUnderlineOffset: '6px',
+                     }}
                   >
                     {tab.name}
                     <span className="text-sm pb-1">▾</span>
@@ -134,7 +135,7 @@ export default function MenuPage() {
         </div>
 
         {/* Search bar */}
-        <div className="flex items-center border border-black rounded-full px-3 py-1 bg-white w-full md:w-60">
+        <div className="flex items-center border-b border-black px-2 py-1 font-josefin w-full md:w-60">
           <input
             type="text"
             placeholder="Search..."
@@ -142,8 +143,9 @@ export default function MenuPage() {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="flex-grow bg-transparent focus:outline-none text-sm px-2"
           />
-          <span className="text-xl text-gray-600">🔍</span>
+          <AiOutlineSearch className="text-xl" />
         </div>
+        
       </div>
 
       {/* Active Tab Header */}
