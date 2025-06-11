@@ -11,7 +11,7 @@ const AboutPage = () => {
       {/* About Section */}
       <div className="max-w-5xl mx-auto py-12 px-6 md:px-0">
         <div className="md:flex md:items-start gap-10">
-          <img src="/images/team-photo.jpg" alt="Shokupan Bakehouse Team" className="w-full md:w-1/2 rounded shadow-md" />
+          <img src="" alt="Shokupan Bakehouse Team" className="w-full md:w-1/2 rounded shadow-md" />
           <div className="mt-6 md:mt-0 md:w-1/2">
             <h2 className="text-3xl font-semibold text-[#8B0000]">About Shokupan Bakehouse</h2>
             <p className="mt-4 text-lg">
